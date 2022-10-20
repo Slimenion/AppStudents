@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AppStudents</string>
+    <string name="SaveString">Сохранить</string>
+    <string name="GroupString">Группа</string>
+    <string name="FacultyText">Факультет</string>
+    <string name="MiddleNameString">Отчество</string>
+    <string name="NameString">Имя</string>
+    <string name="LastNameString">Фамилия</string>
+    <string name="CancelString">Отмена</string>
+    <string name="FacultyHintString">Введите факультет</string>
+    <string name="GroupHintString">Введите группу</string>
+    <string name="LastNameHintString">Введите фамилию</string>
+    <string name="NameHintString">Введите имя</string>
+    <string name="MiddleNameHintString">Введите отчество</string>
+    <string name="AgeText">Возраст</string>
+    <string name="GROUPTEXT">Группа</string>
+    <string name="mvChangeText">Изменить</string>
+    <string name="mvDelete">Удалить</string>
+    <string name="mvAdd">Добавить студента</string>
+</resources>
