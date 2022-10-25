@@ -17,7 +17,10 @@ data class Student(
             val gregorianCalendar1 = GregorianCalendar()
             gregorianCalendar1.timeInMillis=birthDate.time
             val gregorianCalendar2 = GregorianCalendar()
-            val y = gregorianCalendar2.get()
+            var y = gregorianCalendar2.get(GregorianCalendar.YEAR)-gregorianCalendar1.get(GregorianCalendar.YEAR)
+            if (gregorianCalendar2.get(GregorianCalendar.MONTH)<gregorianCalendar1.get(GregorianCalendar.MONTH))
+                y--
+            return  y
         }
 
     override fun equals(other: Any?): Boolean {
