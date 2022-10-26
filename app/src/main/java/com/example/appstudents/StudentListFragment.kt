@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appstudents.data.Student
+import com.example.appstudents.data.StudentsList
 
 class StudentListFragment : Fragment() {
     private lateinit var studentListViewModel: StudentListViewModel
@@ -37,6 +38,9 @@ class StudentListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         studentListViewModel = ViewModelProvider(this).get(StudentListViewModel::class.java)
+        studentListViewModel.studentsList.observe(viewLifecycleOwner) {
+            updateUI(it)
+        }
     }
 
     private inner class StudentListAdapter(private val orderItems: List<Student>)
@@ -71,5 +75,10 @@ class StudentListFragment : Fragment() {
             ageTextView.text = student.age.toString()
         }
 
+    }
+
+    private fun updateUI(studentsList: StudentsList? = null) {
+        if (studentsList==null) return
+        studentListResyclerView.adapter = StudentListAdapter(studentsList.items)
     }
 }
