@@ -29,6 +29,7 @@ class StudentRepository {
 
         student.postValue(studentList.value?.items!![position])
     }
+
     fun addStudent(student: Student) {
         var studentsListTmp = studentList
         if (studentsListTmp.value == null) studentsListTmp.value = StudentsList()
@@ -54,5 +55,9 @@ class StudentRepository {
         if (studentsListTmp.value!!.items.remove(student)) {
             studentsListTmp.postValue(studentsListTmp.value)
         }
+    }
+
+    fun newStudent() {
+        student.postValue(Student())
     }
 }

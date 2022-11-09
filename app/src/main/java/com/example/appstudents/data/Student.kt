@@ -5,12 +5,12 @@ import java.util.*
 
 data class Student(
     val id : UUID = UUID.randomUUID(),
-    var firstName: String,
-    var lastName: String,
-    var middleName: String,
-    var birthDate: Date,
-    var faculty: String,
-    var group: String,
+    var firstName: String="",
+    var lastName: String="",
+    var middleName: String="",
+    var birthDate: Date=Date(),
+    var faculty: String="",
+    var group: String="",
 ) {
     val age : Int
         get(){

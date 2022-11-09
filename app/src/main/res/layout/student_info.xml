@@ -15,7 +15,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="38dp"
@@ -28,7 +28,7 @@
             tools:ignore="TextContrastCheck" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/CancelBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
@@ -214,7 +214,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/nameEditText"
+            android:id="@+id/firstNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:height="48dp"
